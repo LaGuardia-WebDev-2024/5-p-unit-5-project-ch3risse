@@ -1,32 +1,447 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[  yes] height: and width:
+[ yes ] margin: and padding: 
+[ yes ] Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes] Feature 2 - Flip Card
 [ no ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
-[ no ] Feature 5 - Gradient Background
+[ yes ] Feature 5 - Gradient Background
 [ no ] Feature 6 - Spotify Playlist
 -->
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(30, 69, 114, 0.4),
+            rgba(0, 163, 164, 0.78)
+          ),
+          url("https://cdn.glitch.global/09bb4524-f56d-4a39-bc74-05a61b7edce2/itw.jpg?v=1732048685518");
+        height: 100vh;
+        /*      width: 80%; */
+        /*     height: 400px; */
+        /*     background-size: contain; */
+        color: white;
+        /*   height: 500px; */
+        /*     padding: 20px; */
+        background-size: cover;
+        /*     color: white; */
+        /*   background-size: cover; */
+        background-repeat: no-repeat;
+          background-attachment: fixed;
+      }
+/*       div {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+       background-image: url(http://upload.wikimedia.org/wikipedia/commons/8/84/Konqi_svg.svg); 
+        border: 1px solid #666;
+        height: 10em;
+      } */
+      .main {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
 
-  </style>
-</head>
-<body>
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: green;
+        color: black;
+        transform: rotateY(180deg);
+      }
+
+      html {
+        height: 120%;
+      }
+      td {
+        width: 400px;
+        padding: 20px;
+        
+      }
+      
+       .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: green;
+        color: black;
+        transform: rotateY(180deg);
+      }
+      
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+      li 
+      { 
+      display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: darkgreen;
+        
+      }
+      
+     <h1 id="Hello"></h1>
+    </style>
+  </head>
+  <body>     <ul>
+  <li><a href="default.asp">Main "-tagonists"</a></li>
+  <li><a href="facts.html">Fun Facts</a></li>
+  
+</ul>
+    <center>
+      <div id="show_bg_2">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5f8a12b5f8b81275c9b43087/1607054480646-QGH0XEHRD9UOWOTISI87/image-asset.png"
+          width="400"
+        />
+        <h1>
+          Protagonists!
+        </h1>
+        <br>
+      </div>
+    </center>
+<center>
+    <table>
+      <tr>
+        <td>
+        <br>  <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="https://i.pinimg.com/564x/80/5a/a5/805aa59217b3475b07f69b57b6cf74e4.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Marian!</h1>
+                <p>
+                  Marian plays "Little Red" in the Watercress cast. Her voice,
+                  in my opinion, is perfect for the part! She'd incredibly
+                  energetic, her voice is amazing formmusical theatre, and her
+                  acting is reminiscnet of how she acts in real life, which
+                  makes everything feel a lot more natural!
+                </p>
+                <p>Watercress!</p>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><i> This Little Red is from the movie "Into The Woods," featuring other arists like James Corden, Meryl Streep, etc. Musically, I align this "Little Red" with Marian.</i></td>
+      </tr>
+      <tr>
+        <td><i>This "little Red" isfrom the musical that first debuted in 1986 (with the broadway cast sountrack album being released in '87.) I tend to align this one with Annabel most, in terms of personality and physical appearance. She's great at physicality! (And from what I heard, a talented singer!)</i></td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="https://images.nypl.org/index.php?id=swope_280142&t=w&download=1&suffix=b31f5d33-80fa-17da-e040-e00a18062482.001"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Annabel!</h1>
+                <p>
+                  Annabel plays "Little Red" in the Asparagus cast. She's
+                  incredibly outgoing, and from what I've heard, she's incredibly deserving of the role, and I hope I get to see her in more projects!
+                </p>
+                <p>Asparagus!</p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
  
+  
+  
+  </table> 
+  
+  <p>
+    <i>Into The Woods fun fact: "Into The Woods" was inspired by the "Wizard Of Oz"!</i>
+  </p>
+  
+  
+  <table>
+                <tr><td>
+  <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+            
+             <img
+                  src="https://cdn.glitch.global/09bb4524-f56d-4a39-bc74-05a61b7edce2/Kim_crosby_cinderella.webp?v=1732662511181"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Charli!</h1>
+                <p>
+                 Charli plays Cindrella in the Watercress cast. From hat I've heard, she's very talented! From my own experience, she's quite kind as well, so I'm looking forward to to hear her in the Watercress cast as well!
+                </p>
+                <p>Watercress!</p>
+              </div>
+    </div>
+                  </div></td>
+                  <td> <i>Charli, from what I know about them, lean more towards the Cinderella from the older version of Into The Woods. I'm not sure why I feel this was it's a vibe.<br>
+  <br>Savannah is similar to Anna Kendrick's Cinderella. She's incredibly sarcastic, and her voice is quite distinct. Even her mannerisms are quite similar to Anna! It felt like an easy assignment of character.
+                    </i></td>
+                  <td> <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+            
+             <img
+                  src="https://variety.com/wp-content/uploads/2014/12/into-the-woods-anna-kendrick1-600x400.jpg?w=600&h=400&crop=1"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Savannah!</h1>
+                <p>
+                 Savannah plays Cinderella in the Asparagus cast. I've heard her sing numerous of times, in different genres, for the most part. However, her classical voice is definitely her strong suit, and Im not shocked that she's perfect for this role! I'm so excited to see her on stage!
+                </p>
+                <p>Asparagus!</p>
+              </div>
+    </div>
+                  </td>
+                     </table>  
 
-</body>
+          <table>
+      <tr>
+        <td>
+        <br>  <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="https://www.silverpetticoatreview.com/wp-content/uploads/2014/12/50d11080b5e620789355c79625d27161.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>The Baker and his Wife! (Carter and Andy!) </h1>
+                <p>
+                 These two, from what I've heard from their fellow cast members, are incredibly hard working! I can't help but  be excited to see come freh faces on stage (at least, people I hadn't seen before, at least.)
+                </p>
+                <p>Watercress!</p>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><i> I think of these two as the more recent depiction of The Baker and his Wife. I can't really describe why, though. Again, vibes.
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      </tr>
+      <tr>
+        <td><i>These two are more aligned with this version of The Baker and his Wife. I predict they'd be a little more traditional, which might be better for other people. I, personally, have no preference.
+        
+          
+          </i></td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="https://cdn.glitch.global/09bb4524-f56d-4a39-bc74-05a61b7edce2/The_Baker_and_his_wife.webp?v=1732664626921"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>The Baker and The Baker's Wife! (Luke and Maggie!) </h1>
+                <p>
+                   I don't personally know them, but I've heard good things! I stopped by a rehearsal that was occurring after the school day was over, and was thoroughly impressed!
+                </p>
+                  <p>Watercress!</p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+ 
+  
+  
+  </table> 
+                
+  
+       <h1> Deuteragonists!</h1>
+            
+            
+            
+            
+            <i>
+              
+              People who are main characters, but slightly
+            less important. To me. Sorry.</i>
+  
+              
+               <table>
+                <tr><td>
+  <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+            
+             <img
+                  src="https://cdn.glitch.global/09bb4524-f56d-4a39-bc74-05a61b7edce2/Narrator-1987-tom-aldredge2-hr.webp?v=1732739567723"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Narrator! (Avi and Jonah!) </h1>
+                <p>
+                 The Narrators are Avi and Jonah, which I thought was a genuis pick. They're both quite outgoing, and very sociable peopl. I was a great choice to pick them to narrate the sotry; They'd be making it really interesting!
+                </p>
+            
+              </div>
+    </div>
+                  </div></td>
+                  <td> The narrator in the musical at the school is a bit different! (I won't say how, though..) and I think it's xtremely creative, and the people that were picked are gonna pull it off. They're both very funny and outgoing based on my own experiences with them, and I can't wait to see what they'll bring.<br>
+  <br> All of the guys in this group act like the princes
+from the most recent Into The Woods; very comical, incredibly talented, and quite charming!
+                    
+                    
+                    
+                    
+                    
+                    </td>
+                  <td> <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+            
+             <img
+                  src="https://knightleyemma.com/wp-content/uploads/2015/01/itw_princes.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px; object-fit: cover"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>The Princes, Rapunzel's and Cinderella's. (Logan, Roberto, Sasha, and Owen!) </h1>
+                
+                  
+                  <p>
+           <h6>
+             These four were perfect to pick, and would honestly mesh well with any cast. They're all incredibly magnetic in terms of choosing who yyou'd speak to, and are genuinely interesting, multi talented people. I can't really pick a cast that I would ratther see if I was solely seeing the princes. So, see both!
+                </h6>  
+                </p>
+              </div>
+    </div>
+                  </td>
+                     </table>  
+
+             
+              
+             
+              
+              
+             
+  
+  </body>
+  
+  
+  
 </html>

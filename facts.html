@@ -1,0 +1,231 @@
+<!-- Unit 5 Project
+Requirements
+[ yes ] <div> and <span>
+[  yes] height: and width:
+[ yes ] margin: and padding: 
+[ yes ] Three Images
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Flexbox
+[ yes] Feature 2 - Flip Card
+[ no ] Feature 3 - Navbar
+[ no ] Feature 4 - Shaking Animation
+[ yes ] Feature 5 - Gradient Background
+[ no ] Feature 6 - Spotify Playlist
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(30, 69, 114, 0.4),
+            rgba(0, 163, 164, 0.78)
+          ),
+          url("https://cdn.glitch.global/09bb4524-f56d-4a39-bc74-05a61b7edce2/itw.jpg?v=1732048685518");
+        height: 100vh;
+        /*      width: 80%; */
+        /*     height: 400px; */
+        /*     background-size: contain; */
+        color: white;
+        /*   height: 500px; */
+        /*     padding: 20px; */
+        background-size: cover;
+        /*     color: white; */
+        /*   background-size: cover; */
+        background-repeat: no-repeat;
+          background-attachment: fixed;
+      }
+/*       div {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+       background-image: url(http://upload.wikimedia.org/wikipedia/commons/8/84/Konqi_svg.svg); 
+        border: 1px solid #666;
+        height: 10em;
+      } */
+      .main {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: green;
+        color: black;
+        transform: rotateY(180deg);
+      }
+
+      html {
+        height: 120%;
+      }
+      td {
+        width: 400px;
+        padding: 20px;
+        
+      }
+      
+       .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: green;
+        color: black;
+        transform: rotateY(180deg);
+      }
+      
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+      li 
+      { 
+      display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: darkgreen;
+        
+      }
+      
+     <h1 id="Hello"></h1>
+    </style>
+  </head>
+
+  
+  <body>     <ul>
+  <li><a href="default.asp">Main "-tagonists"</a></li>
+  <li><a href="news.asp">Villains (imo)</a></li>
+  <li><a href="contact.asp">Fun Facts</a></li>
+  
+</ul>
+    <center>
+      <div id="show_bg_2">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5f8a12b5f8b81275c9b43087/1607054480646-QGH0XEHRD9UOWOTISI87/image-asset.png"
+          width="400"
+        />
+        <h1>
+          Fun facts! 
+          
+          </h1>
+  <table>
+    <tr>
+    <td>
+    <img src= "https://www.karereviews.net/uploads/5/9/7/0/59707955/published/static-playbill-2_1.jpg?1590634374"/>
+      </td>
+      <td>
+       <h3>
+          <i>"Hollywood attempted a film adaptation of Into the Woods at least three times before. In the early 1990s Columbia Pictures announced it was working on an adaptation with a cast that was to have featured Cher as the Witch, Robin Williams as the Baker, Goldie Hawn as the Baker's Wife, Steve Martin as the Wolf and Danny DeVito as the Giant. Nothing came of that beyond a reading," writes Playbill.</i>
+        </h3>
+      </td>
+    </tr>
+    
+          </table>
+             
+  <table>
+    <tr>
+    <td><center>Stephen Sondheim has received eight Tony® Awards, more than any other composer in history. He has won seven times: Best Music and Best Lyrics for “Company” (1971); and BestScore for “Follies” (1972), “A Little Night Music” (1973), “Sweeney Todd” (1979), “Into the Woods” (1988) and “Passion” (1994). 
+      </center>
+      
+      </td>
+    </tr>
+   <tr><td> <img src= "https://faroutmagazine.co.uk/static/uploads/1/2022/12/Looking-back-at-the-bloody-brilliance-of-Sweeney-Todd-15-years-later-1140x855.jpg"width= 450/>
+   </td>
+    <td><img src= "https://images.ctfassets.net/6pezt69ih962/4hMXd4fDHMGE11OBEZDVkp/05604c9e64c51c179d6b3cbc400b58f6/CMP_Prod-Image8_Photo_by_Brinkhoff-Moegenburg.png" width= '450'  </td>
+    </tr>
+     
+   
+    <td>
+    
+    </td>
+        </table>
+  </body>
+  
+  
+  
+</html>
